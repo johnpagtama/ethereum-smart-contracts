@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/johnpagtama/ethereum-smart-contracts/issues"
   },
-  "homepage": "https://github.com/johnpagtama/ethereum-smart-contracts#readme"
+  "homepage": "https://github.com/johnpagtama/ethereum-smart-contracts#readme",
+  "devDependencies": {
+    "@openzeppelin/contracts": "^4.6.0"
+  }
 }
