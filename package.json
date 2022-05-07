@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/johnpagtama/ethereum-smart-contracts#readme",
   "devDependencies": {
-    "@openzeppelin/contracts": "^4.6.0"
+    "@openzeppelin/contracts": "^4.6.0",
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "chai": "^4.3.6"
   }
 }
