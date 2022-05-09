@@ -18,7 +18,8 @@
  *
  */
 
-// const HDWalletProvider = require('@truffle/hdwallet-provider');
+require('dotenv').config();
+const HDWalletProvider = require('@truffle/hdwallet-provider');
 //
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
@@ -45,6 +46,17 @@ module.exports = {
 			host: '127.0.0.1', // Localhost (default: none)
 			port: 8545, // Standard Ethereum port (default: none)
 			network_id: '*', // Any network (default: none)
+		},
+		rinkeby: {
+			provider: () =>
+				new HDWalletProvider(
+					process.env.MNEMONIC,
+					`https://eth-rinkeby.alchemyapi.io/v2/${process.env.ALCHEMY_API_KEY}`
+				),
+			network_id: 4,
+			networkCheckTimeout: 999999,
+			gasPrice: 10e9,
+			skipDryRun: true,
 		},
 		// Another network with more advanced options...
 		// advanced: {
