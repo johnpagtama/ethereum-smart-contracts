@@ -1,11 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-// Import Ownable from the OpenZeppelin Contracts library
-// import '@openzeppelin/contracts/access/Ownable.sol';
+// import './Box.sol';
 
-// Make Box inherit from the Ownable contract
-contract Box {
+contract BoxV2 {
     uint256 private _value;
 
     // Emitted when the stored value changes
@@ -20,5 +18,10 @@ contract Box {
     // Reads the last stored value
     function retrieve() public view returns (uint256) {
         return _value;
+    }
+
+    function increment() public {
+        _value = _value + 1;
+        emit ValueChanged(_value);
     }
 }
